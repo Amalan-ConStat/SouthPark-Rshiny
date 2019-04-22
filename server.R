@@ -1,5 +1,7 @@
 library(shiny)
 
+load("Data/southparkData.RData")
+
 # Define server logic 
 shinyServer(
   function(input, output) 

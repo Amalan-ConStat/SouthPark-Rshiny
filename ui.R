@@ -1,3 +1,22 @@
+# loading packages ----    
+library(shinydashboard)
+library(shinycssloaders)
+
+library(southparkr)
+
+library(tidyverse)
+library(tidytext)
+library(tibble)
+
+library(RColorBrewer)
+library(gganimate)
+library(highcharter)
+library(kableExtra)
+library(plotly)
+
+# Load the data ----
+load("Data/southparkData.RData")
+
 # adding 
 CharacterList<-Updatedseason %>%
                count(Char=as.factor(Character),sort = TRUE) %>%
@@ -145,25 +164,7 @@ theme_southpark_sp<-theme(
   
                            legend.background = element_rect(fill="#f7a5bb",color="#ff0000")
                           )
-# Load the data ----
-load("Data/southparkData.RData")
 
-# loading packages ----    
-library(shinydashboard)
-library(shinycssloaders)
-
-library(southparkr)
-
-library(tidyverse)
-library(tidytext)
-library(extrafont)
-#loadfonts(device = "win")
-
-library(RColorBrewer)
-library(gganimate)
-library(highcharter)
-library(kableExtra)
-library(plotly)
 
 # Define UI for application ----
 dashboardPage(

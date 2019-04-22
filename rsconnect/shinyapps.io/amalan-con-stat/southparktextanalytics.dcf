@@ -1,0 +1,10 @@
+name: southparktextanalytics
+title:
+username:
+account: amalan-con-stat
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 881718
+bundleId: 2029676
+url: https://amalan-con-stat.shinyapps.io/southparktextanalytics/
+when: 1555946529.19086
