@@ -3,13 +3,14 @@ library(shinydashboard)
 library(shinycssloaders)
 
 library(southparkr)
-
+library(extrafont)
+#loadfonts()
 library(tidyverse)
 library(tidytext)
 library(tibble)
 
 library(RColorBrewer)
-library(gganimate)
+#library(gganimate)
 library(highcharter)
 library(kableExtra)
 library(plotly)
@@ -37,15 +38,15 @@ theme_southpark_bp<-theme(
   
                           panel.border=element_rect(fill=NA,color="white"),
   
-                          plot.title = element_text(family = "Garamond",size = "13",
+                          plot.title = element_text(family = "Constantia",size = "13",
                                                     face = "bold",color ="#ce0e1e" ),
-                          axis.text.x = element_text(family = "Garamond",size = "9",
+                          axis.text.x = element_text(family = "Constantia",size = "9",
                                                     face = "bold",color ="#ff0000" ),
-                          axis.text.y = element_text(family = "Garamond",size = "9",
+                          axis.text.y = element_text(family = "Constantia",size = "9",
                                                     face = "bold",color ="#000000" ),
-                          axis.title = element_text(family = "Garamond",size = "11",
+                          axis.title = element_text(family = "Constantia",size = "11",
                                                     face = "bold",color ="#0636a5" ),
-                          plot.subtitle = element_text(family = "Garamond",size = "11.5",
+                          plot.subtitle = element_text(family = "Constantia",size = "11.5",
                                                        face = "bold",color ="#e8304f")
                           )
 
@@ -62,15 +63,15 @@ theme_southpark_bp2<-theme(
   
                            panel.border=element_rect(fill=NA,color="white"),
   
-                           plot.title = element_text(family = "Garamond",size = "13",
+                           plot.title = element_text(family = "Constantia",size = "13",
                                                      face = "bold",color ="#ce0e1e" ),
-                           axis.text.y = element_text(family = "Garamond",size = "9",
+                           axis.text.y = element_text(family = "Constantia",size = "9",
                                                       face = "bold",color ="#ff0000" ),
-                           axis.text.x = element_text(family = "Garamond",size = "9",
+                           axis.text.x = element_text(family = "Constantia",size = "9",
                                                       face = "bold",color ="#000000" ),
-                           axis.title = element_text(family = "Garamond",size = "11",
+                           axis.title = element_text(family = "Constantia",size = "11",
                                                      face = "bold",color ="#0636a5" ),
-                           plot.subtitle = element_text(family = "Garamond",size = "11.5",
+                           plot.subtitle = element_text(family = "Constantia",size = "11.5",
                                                         face = "bold",color ="#e8304f")
                             )
 
@@ -87,18 +88,18 @@ theme_southpark_bp3<-theme(
   
                            panel.border=element_rect(fill=NA,color="white"),
   
-                           plot.title = element_text(family = "Garamond",size = "13",
+                           plot.title = element_text(family = "Constantia",size = "13",
                                                      face = "bold",color ="#ce0e1e" ),
-                           axis.text.y = element_text(family = "Garamond",size = "9",
+                           axis.text.y = element_text(family = "Constantia",size = "9",
                                                       face = "bold",color ="#ff0000" ),
-                           axis.text.x = element_text(family = "Garamond",size = "9",
+                           axis.text.x = element_text(family = "Constantia",size = "9",
                                                       face = "bold",color ="#000000" ),
-                           axis.title = element_text(family = "Garamond",size = "11",
+                           axis.title = element_text(family = "Constantia",size = "11",
                                                      face = "bold",color ="#0636a5" ),
-                           plot.subtitle = element_text(family = "Garamond",size = "11.5",
+                           plot.subtitle = element_text(family = "Constantia",size = "11.5",
                                                         face = "bold",color ="#e8304f"),
                            
-                           strip.text = element_text(family = "Garamond",size = "10.5",
+                           strip.text = element_text(family = "Constantia",size = "10.5",
                                                      face = "bold",color = "#ff0000"),
                            strip.background = element_rect(color = "white",fill ="#0636a5" )
                            )
@@ -116,18 +117,18 @@ theme_southpark_bp4<-theme(
   
                            panel.border=element_rect(fill=NA,color="white"),
   
-                           plot.title = element_text(family = "Garamond",size = "13",
+                           plot.title = element_text(family = "Constantia",size = "13",
                                                       face = "bold",color ="#ce0e1e" ),
-                           axis.text.y = element_text(family = "Garamond",size = "9",
+                           axis.text.y = element_text(family = "Constantia",size = "9",
                                                       face = "bold",color ="#ff0000" ),
-                           axis.text.x = element_text(family = "Garamond",size = "9",
+                           axis.text.x = element_text(family = "Constantia",size = "9",
                                                       face = "bold",color ="#000000" ),
-                           axis.title = element_text(family = "Garamond",size = "11",
+                           axis.title = element_text(family = "Constantia",size = "11",
                                                       face = "bold",color ="#0636a5" ),
-                           plot.subtitle = element_text(family = "Garamond",size = "11.5",
+                           plot.subtitle = element_text(family = "Constantia",size = "11.5",
                                                         face = "bold",color ="#e8304f"),
   
-                           strip.text = element_text(family = "Garamond",size = "10.5",
+                           strip.text = element_text(family = "Constantia",size = "10.5",
                                                       face = "bold",color = "#ff0000"),
                            strip.background = element_rect(color = "white",fill ="#0636a5" ),
                            
@@ -147,18 +148,18 @@ theme_southpark_sp<-theme(
   
                            panel.border=element_rect(fill=NA,color="#ff0000"),
   
-                           plot.title = element_text(family = "Garamond",size = "13",
+                           plot.title = element_text(family = "Constantia",size = "13",
                                                      face = "bold",color ="#ce0e1e" ),
-                           axis.text.y = element_text(family = "Garamond",size = "9",
+                           axis.text.y = element_text(family = "Constantia",size = "9",
                                                       face = "bold",color ="#ff0000" ),
-                           axis.text.x = element_text(family = "Garamond",size = "9",
+                           axis.text.x = element_text(family = "Constantia",size = "9",
                                                        face = "bold",color ="#ff0000" ),
-                           axis.title = element_text(family = "Garamond",size = "11",
+                           axis.title = element_text(family = "Constantia",size = "11",
                                                      face = "bold",color ="#0636a5" ),
-                           plot.subtitle = element_text(family = "Garamond",size = "11.5",
+                           plot.subtitle = element_text(family = "Constantia",size = "11.5",
                                                         face = "bold",color ="#e8304f"),
   
-                           strip.text = element_text(family = "Garamond",size = "10.5",
+                           strip.text = element_text(family = "Constantia",size = "10.5",
                                                       face = "bold",color = "#ff0000"),
                            strip.background = element_rect(color = "white",fill ="#0636a5" ),
   
@@ -306,26 +307,27 @@ dashboardPage(
                                     text-align: justify;
                                     color: #bd022c",
                                     h3("Packages Used"),
-                                    tags$a(href="","shiny"),"-",
-                                    tags$a(href="","shinydashboard"),"-",
-                                    tags$a(href="","shinycssloaders"),
+                                    tags$a(href="https://github.com/rstudio/shiny","shiny"),"-",
+                                    tags$a(href="https://github.com/rstudio/shinydashboard","shinydashboard"),"-",
+                                    tags$a(href="https://github.com/andrewsali/shinycssloaders","shinycssloaders"),
                                     br(),
                                     br(),
-                                    tags$a(href="","southparkr"),
+                                    tags$a(href="https://github.com/pdrhlik/southparkr","southparkr"),"-"
+                                    tags$a(href="https://github.com/tidyverse/tibble","tibble"),
                                     br(),
                                     br(),
-                                    tags$a(href="","tidyverse"),"-",
-                                    tags$a(href="","tidytext"),"-",
-                                    tags$a(href="","extrafont"),
+                                    tags$a(href="https://github.com/tidyverse/tidyverse","tidyverse"),"-",
+                                    tags$a(href="https://github.com/juliasilge/tidytext","tidytext"),"-",
+                                    tags$a(href="https://github.com/wch/extrafont","extrafont"),
                                     br(),
                                     br(),
-                                    tags$a(href="","gganimate"),"-",
-                                    tags$a(href="","plotly"),"-",
-                                    tags$a(href="","highcharter"),
+                                    tags$a(href="https://github.com/thomasp85/gganimate","gganimate"),"-",
+                                    tags$a(href="https://github.com/ropensci/plotly","plotly"),"-",
+                                    tags$a(href="https://github.com/jbkunst/highcharter","highcharter"),
                                     br(),
                                     br(),
-                                    tags$a(href="","kableExtra"),"-",
-                                    tags$a(href="","RColorBrewer"),
+                                    tags$a(href="https://github.com/jbkunst/highcharter","kableExtra"),"-",
+                                    tags$a(href="https://cran.r-project.org/web/packages/RColorBrewer/index.html","RColorBrewer"),
                                     br()
                                     ),
                                 box(width=3,
@@ -342,16 +344,16 @@ dashboardPage(
                                     br(),
                                     br(),
                                     "Use packages",
-                                    tags$a(href="https://github.com/mjockers/syuzhet","syuzhet"),
-                                    tags$a(href="https://github.com/trinker/lexicon","lexicon"),
-                                    tags$a(href="https://github.com/trinker/sentimentr","sentimentr"),
+                                    tags$a(href="https://github.com/mjockers/syuzhet","syuzhet"),",",
+                                    tags$a(href="https://github.com/trinker/lexicon","lexicon"),",",
+                                    tags$a(href="https://github.com/trinker/sentimentr","sentimentr"),",",
                                     "and",
                                     tags$a(href="https://github.com/sfeuerriegel/SentimentAnalysis","SentimentAnalysis"),
                                     " with related to text analytics and sentiment analysis.",
                                     br(),
                                     br(),
                                     "Use the package ",
-                                    tags$a(href="https://github.com/ropensci/magick","magick"),
+                                    tags$a(href="https://github.com/ropensci/magick","magick"),",",
                                     tags$a(href="https://github.com/ryantimpe/brickr","brickr"),
                                     "and",
                                     tags$a(href="https://github.com/tylermorganwall/rayshader","rayshader"),
@@ -408,14 +410,16 @@ dashboardPage(
 
                                     ),
                                 box(width=3,
-                                    tableOutput("table1")
+                                    tableOutput("table1") %>% withSpinner(type = 6,color ="#A23333", 
+                                                                          size=1.5)
                                     )
                                 ),
                         h2("Ratings"),
                         fluidRow(
                                 box(width=6,
                                     plotlyOutput("plot_Tri1") %>% withSpinner(type = 6,color ="#A23333", 
-                                                                              size=1.5)
+                                                                               size=1.5)
+                                    #includeHTML("www/plot_Tri1.html")
                                     ),
                                 box(width=5,
                                     style = " font-family: Garamond; 
@@ -559,7 +563,7 @@ dashboardPage(
                                     text-align: justify;
                                     color: #304EA8",
                                     "I have used two packages ",
-                                    tags$a(href="https://github.com/ryantimpe/brickr","brickr"),
+                                    tags$a(href="https://github.com/ryantimpe/brickr","brickr"),",",
                                     tags$a(href="https://github.com/tylermorganwall/rayshader","rayshader"), 
                                     "to convert an above shown image into lego shaped
                                     3d plot. I thinkg its very cool that we have such packages.",
@@ -1074,8 +1078,9 @@ dashboardPage(
                                     ),
                                 box( solidHeader = TRUE,status = "info",height = 600,
                                     title = "Ratings by Episodes for All Seasons",
-                                    imageOutput("plot_RV_2") %>% withSpinner(type = 3,color ="#099643" ,size=1.5,
-                                                                             color.background="#FFFFFF")
+                                    # imageOutput("plot_RV_2") %>% withSpinner(type = 3,color ="#099643" ,size=1.5,
+                                    #                                          color.background="#FFFFFF")
+                                    HTML('<center><img src="plot_RV2.gif" width=750 height=525></center>')
                                     )
                             ),
                         fluidRow(
@@ -1166,8 +1171,9 @@ dashboardPage(
                                     ),
                                 box( solidHeader = TRUE,status = "info",height = 600,
                                     title = "Votings by Episodes for All Seasons",
-                                    imageOutput("plot_RV_5") %>% withSpinner(type = 3,color ="#099643" ,size=1.5,
-                                                                              color.background="#FFFFFF")
+                                    # imageOutput("plot_RV_5") %>% withSpinner(type = 3,color ="#099643" ,size=1.5,
+                                    #                                           color.background="#FFFFFF")
+                                    HTML('<center><img src="plot_RV5.gif" width=750 height=525></center>')
                                     )
                             ),
                         fluidRow(
@@ -1556,7 +1562,8 @@ dashboardPage(
                                 box(width = 4,solidHeader = TRUE,status = "info",
                                     title = "Most Spoken Bi-grams",
                                     plotOutput("plot_ng_1")  %>% withSpinner(type = 3,color ="#099643" ,size=1.5,
-                                                                              color.background="#FFFFFF")
+                                                                               color.background="#FFFFFF")
+                                    
                                     ),
                                 box(width = 4,solidHeader = TRUE,status = "info",
                                     title = "Bi-grams and Tri-grams Analysis",

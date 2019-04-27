@@ -1772,7 +1772,7 @@ shinyServer(
                           count(bigram,sort = TRUE) %>%
                           head(25) %>%
                           ggplot(.,aes(fct_inorder(bigram),n))+
-                          geom_col(fill="#31773c",color="white")+coord_flip()+  
+                          geom_col(fill="#31773c",color="white")+coord_flip()+
                           geom_text(aes(label=n),hjust="inward")+
                           ylab("No of Times")+xlab("Bi-grams")+
                           ggtitle("Most Spoken Bi-grams")+theme_southpark_bp2
@@ -1785,7 +1785,7 @@ shinyServer(
                           remove_missing() %>%
                           head(25)  %>%
                           ggplot(.,aes(fct_inorder(Trigram),n))+
-                          geom_col(fill="#31773c",color="white")+coord_flip()+  
+                          geom_col(fill="#31773c",color="white")+coord_flip()+
                           geom_text(aes(label=n),hjust="inward")+
                           ylab("No of Times")+xlab("Tri-grams")+
                           ggtitle("Most Spoken Tri-grams")+theme_southpark_bp2
@@ -1864,28 +1864,28 @@ shinyServer(
                           ggtitle("Ratings changing over the Years for South Park",
                                   subtitle = "by Season")+theme_southpark_sp
                           },height = 550)
-    output$plot_RV_2<-renderImage({
-                          plot_RV2<-tempfile(fileext = '.gif')                    
-      
-                          p<-imdb_ratings %>%
-                             subset(season_number!= 23 & episode_name !="Unaired Pilot") %>%
-                             ggplot(.,aes(factor(season_episode_number),user_rating))+
-                             geom_col(fill="#31773c",color="white")+
-                             geom_text(aes(label=user_rating),vjust="inward")+
-                             transition_states(season_number,transition_length = 2,state_length = 3)+
-                             enter_fade()+exit_fade()+ theme_southpark_bp+
-                             xlab("Episode Number")+ylab("User Rating")+
-                             ggtitle("SouthPark Rating",subtitle="Season : {closest_state}")
-      
-                             anim_save("plot_RV2.gif",animate(p))  
-                             
-                             list(src = "plot_RV2.gif",
-                                  contentType = 'image/gif',
-                                   width = 750,
-                                   height = 525
-                                  # alt = "This is alternate text"
-                             )}, deleteFile = TRUE
-                          )
+    # output$plot_RV_2<-renderImage({
+    #                       plot_RV2<-tempfile(fileext = '.gif')
+    #
+                          # p<-imdb_ratings %>%
+                          #    subset(season_number!= 23 & episode_name !="Unaired Pilot") %>%
+                          #    ggplot(.,aes(factor(season_episode_number),user_rating))+
+                          #    geom_col(fill="#31773c",color="white")+
+                          #    geom_text(aes(label=user_rating),vjust="inward")+
+                          #    transition_states(season_number,transition_length = 2,state_length = 3)+
+                          #    enter_fade()+exit_fade()+ theme_southpark_bp+
+                          #    xlab("Episode Number")+ylab("User Rating")+
+                          #    ggtitle("SouthPark Rating",subtitle="Season : {closest_state}")
+                          # 
+                          #    anim_save("plot_RV2.gif",animate(p,width=750,height=525))
+
+    #                          list(src = "plot_RV2.gif",
+    #                               contentType = 'image/gif',
+    #                                width = 750,
+    #                                height = 525
+    #                               # alt = "This is alternate text"
+    #                          )}, deleteFile = TRUE
+    #                       )
     output$plot_RV_3<-renderPlot({
                           imdb_ratings %>%
                           subset(season_number!= 23 & episode_name !="Unaired Pilot") %>%
@@ -1907,33 +1907,33 @@ shinyServer(
                           geom_jitter()+
                           facet_wrap(~air_date)+
                           theme(legend.position = "bottom")+
-                          labs(color="Epi No")+ 
+                          labs(color="Epi No")+ theme_southpark_sp+
                           xlab("Season")+ylab("User Votes")+
                           ggtitle("Votes changing over the Years for South Park",
                                   subtitle = "by Season")
                           },height = 550)
-    output$plot_RV_5<-renderImage({
-                          plot_RV5<-tempfile(fileext = '.gif')
-      
-                          p<-imdb_ratings %>%
-                             subset(season_number!= 23 & episode_name !="Unaired Pilot") %>%
-                             ggplot(.,aes(factor(season_episode_number),user_votes))+
-                             geom_col(fill="#31773c",color="white")+
-                             geom_text(aes(label=user_votes),vjust="inward")+
-                             transition_states(season_number,transition_length = 2,state_length = 3)+
-                             enter_fade()+exit_fade()+ theme_southpark_bp+
-                             xlab("Episode Number")+ylab("User Votes")+
-                             ggtitle("SouthPark Votes",subtitle="Season :{closest_state}")
-                          
-                          anim_save("plot_RV5.gif",animate(p))  
-                          
-                          list(src = "plot_RV5.gif",
-                               contentType = 'image/gif',
-                               width = 750,
-                               height = 525
-                               # alt = "This is alternate text"
-                          )}, deleteFile = TRUE
-                         )
+    # output$plot_RV_5<-renderImage({
+    #                       plot_RV5<-tempfile(fileext = '.gif')
+    #   
+                          # p<-imdb_ratings %>%
+                          #    subset(season_number!= 23 & episode_name !="Unaired Pilot") %>%
+                          #    ggplot(.,aes(factor(season_episode_number),user_votes))+
+                          #    geom_col(fill="#31773c",color="white")+
+                          #    geom_text(aes(label=user_votes),vjust="inward")+
+                          #    transition_states(season_number,transition_length = 2,state_length = 3)+
+                          #    enter_fade()+exit_fade()+ theme_southpark_bp+
+                          #    xlab("Episode Number")+ylab("User Votes")+
+                          #    ggtitle("SouthPark Votes",subtitle="Season :{closest_state}")
+                          # 
+                          # anim_save("plot_RV5.gif",animate(p,width=750,height=525))
+    #                       
+    #                       list(src = "plot_RV5.gif",
+    #                            contentType = 'image/gif',
+    #                            width = 750,
+    #                            height = 525
+    #                            # alt = "This is alternate text"
+    #                       )}, deleteFile = TRUE
+    #                      )
     output$plot_RV_6<-renderPlot({
                           imdb_ratings %>%
                           subset(season_number!=23 & episode_name !="Unaired Pilot") %>%
