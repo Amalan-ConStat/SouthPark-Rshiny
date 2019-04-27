@@ -20,6 +20,7 @@ Location for the Rshiny App: https://amalan-con-stat.shinyapps.io/southparktexta
 * Sentiment Analysis sub tab - Summarize information with related to sentiment analysis with AFINN, bing and nrc methods.
 * Bigram and Trigram Analysis sub tab - Summarize information with related to n-gram introduction.
 
+# User Inputs needed here
 * Compare Two Seasons tab - Comparing two seasons when given by the user to analyze words, lines, characters, seasons, special words
                             and sentiment analysis.
 * Compare Two Characters tab - Comparing two Characters when given by the user to analyze words, lines, seasons, episodes, special words
