@@ -19,9 +19,16 @@ Location for the Rshiny App: https://amalan-con-stat.shinyapps.io/southparktexta
 * Ratings and Votes sub tab - Summarize information with related to votes and rating from IMDB for all 22 seasons.
 * Sentiment Analysis sub tab - Summarize information with related to sentiment analysis with AFINN, bing and nrc methods.
 * Bigram and Trigram Analysis sub tab - Summarize information with related to n-gram introduction.
+
 * Compare Two Seasons tab - Comparing two seasons when given by the user to analyze words, lines, characters, seasons, special words
                             and sentiment analysis.
 * Compare Two Characters tab - Comparing two Characters when given by the user to analyze words, lines, seasons, episodes, special words
                                and sentiment analysis.                           
+* Compare Two Characters but Same Season tab - Comparing two Characters when given by the user to analyze words, lines, seasons, episodes, 
+                                               special words and sentiment analysis.                        
+* Compare Two Seasons but Same Character tab - Comparing two seasons of the same character when given by the user to analyze words, lines, 
+                                               characters, seasons, special words and sentiment analysis.
+
+_ Take some time until the shiny app is loaded._
 
 *THANK YOU*
