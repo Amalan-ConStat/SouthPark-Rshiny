@@ -271,6 +271,41 @@ dashboardPage(
                         ),
                 tabItems( # adding content to trivia tab -----
                         tabItem(tabName = "trivia",
+                        fluidRow(
+                                box(width=1,
+                                    style = " font-family: Garamond; 
+                                    font-size: 20px; 
+                                    font-style: bold; 
+                                    font-variant: normal; 
+                                    font-weight: 900; 
+                                    line-height: 21px; 
+                                    text-align: center;
+                                    color: #bd022c",
+                                    "**Note**"),
+                                box(
+                                    width = 7,
+                                    style = " font-family: Garamond; 
+                                    font-size: 20px; 
+                                    font-style: normal; 
+                                    font-variant: normal; 
+                                    font-weight: 900; 
+                                    line-height: 22px; 
+                                    text-align: justify;
+                                    color: #bd022c",
+                                    "Ideal monitor size for this Rshiny App is 21 Inches
+                                    with your browsers page zoom being 100 %."
+                                    ),
+                                box(width=1,
+                                    style = " font-family: Garamond; 
+                                    font-size: 20px; 
+                                    font-style: bold; 
+                                    font-variant: normal; 
+                                    font-weight: 900; 
+                                    line-height: 21px; 
+                                    text-align: center;
+                                    color: #bd022c",
+                                    "**Note**")
+                                ),        
                         h2("Introduction"),
                         fluidRow(
                                 box(width=4,
@@ -312,7 +347,7 @@ dashboardPage(
                                     tags$a(href="https://github.com/andrewsali/shinycssloaders","shinycssloaders"),
                                     br(),
                                     br(),
-                                    tags$a(href="https://github.com/pdrhlik/southparkr","southparkr"),"-"
+                                    tags$a(href="https://github.com/pdrhlik/southparkr","southparkr"),"-",
                                     tags$a(href="https://github.com/tidyverse/tibble","tibble"),
                                     br(),
                                     br(),
